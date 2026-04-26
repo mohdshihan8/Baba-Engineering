@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(taskkill *)",
+      "Read(c:\\Users\\Mohammed Shihan\\Downloads/**)",
+      "Read(C:\\Users\\Mohammed Shihan\\Downloads/**)"
+    ]
+  },
+  "$version": 3
+}
