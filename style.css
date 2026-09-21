@@ -1680,6 +1680,8 @@ footer {
         display: block;
         width: 100%;
         text-align: center;
+        background: #FFFFFF;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 
     .nav-links li::after {
