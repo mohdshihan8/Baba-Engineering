@@ -219,6 +219,8 @@ body {
     transition: color 0.3s ease;
     display: inline-block;
     padding: 8px 16px;
+    background: #FFFFFF;
+    border-radius: 6px;
 }
 
 .nav-links li.gooey-active a {
@@ -1672,6 +1674,7 @@ footer {
 
     .nav-links li {
         border-radius: 0;
+        background: #FFFFFF;
     }
 
     .nav-links a {
@@ -1843,6 +1846,8 @@ footer {
     .nav-links a {
         font-size: 0.75rem;
         padding: 6px 12px;
+        background: #FFFFFF;
+        border-radius: 4px;
     }
 
     .hero {
