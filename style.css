@@ -38,6 +38,45 @@ body {
     line-height: 1.6;
 }
 
+/* SPLASH SCREEN */
+.splash {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    animation: splashFade 0.8s 1.8s var(--bezier) forwards;
+}
+
+@keyframes splashFade {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.splash-logo {
+    height: clamp(120px, 25vw, 280px);
+    width: auto;
+    object-fit: contain;
+    transform: scale(2.5);
+    animation: logoZoom 0.8s 1s var(--bezier) forwards;
+    will-change: transform;
+}
+
+@keyframes logoZoom {
+    0% {
+        transform: scale(2.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 /* NAVBAR */
 .main-nav {
     position: fixed;
@@ -83,11 +122,11 @@ body {
     transform: rotate(12deg);
 }
 
-.logo-text {
-    font-family: 'Manrope', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: 1px;
+.logo-img {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+    display: block;
 }
 
 /* HAMBURGER MENU */
@@ -400,7 +439,7 @@ body {
     text-transform: uppercase;
     color: var(--primary);
     margin-bottom: 1.5rem;
-    animation: fadeUp 0.6s ease both;
+    animation: fadeUp 0.6s 1.3s ease both;
 }
 
 .hero-sub {
@@ -409,7 +448,7 @@ body {
     color: rgba(255, 255, 255, 0.7);
     line-height: 1.7;
     max-width: 520px;
-    animation: fadeUp 0.7s 0.2s ease both;
+    animation: fadeUp 0.7s 1.4s ease both;
 }
 
 .hero-tags {
@@ -417,7 +456,7 @@ body {
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 1.8rem;
-    animation: fadeUp 0.7s 0.3s ease both;
+    animation: fadeUp 0.7s 1.5s ease both;
 }
 
 .hero-tag {
@@ -435,7 +474,7 @@ body {
     gap: 14px;
     flex-wrap: wrap;
     margin-top: 2.5rem;
-    animation: fadeUp 0.7s 0.4s ease both;
+    animation: fadeUp 0.7s 1.6s ease both;
 }
 
 .btn-primary {
@@ -492,7 +531,7 @@ body {
     flex-direction: column;
     gap: 16px;
     z-index: 2;
-    animation: fadeUp 0.7s 0.5s ease both;
+    animation: fadeUp 0.7s 1.7s ease both;
 }
 
 .stat-card {
@@ -1580,7 +1619,6 @@ footer {
 /* ===== MOBILE RESPONSIVE (max 768px) ===== */
 @media (max-width: 768px) {
 
-    /* NAVBAR */
     .main-nav {
         padding: 0 4%;
         height: 56px;
@@ -1594,8 +1632,8 @@ footer {
         display: flex;
     }
 
-    .nav-logo span {
-        font-size: 1.3rem;
+    .logo-img {
+        height: 26px;
     }
 
     /* Mobile Nav Overlay */
@@ -1790,6 +1828,10 @@ footer {
 
     .nav-logo {
         font-size: 1.5rem;
+    }
+
+    .logo-img {
+        height: 28px;
     }
 
     .nav-links {

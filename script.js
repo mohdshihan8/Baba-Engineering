@@ -25,6 +25,16 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.1 });
 reveals.forEach(r => observer.observe(r));
 
+(function () {
+    const splash = document.getElementById('splash');
+    if (!splash) return;
+    function cleanup() {
+        splash.removeEventListener('animationend', cleanup);
+        splash.remove();
+    }
+    splash.addEventListener('animationend', cleanup);
+})();
+
 // ─── GOOEY NAV ───
 (function () {
     const container = document.getElementById('gooeyNavContainer');
