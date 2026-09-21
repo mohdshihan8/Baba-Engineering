@@ -43,7 +43,7 @@ body {
     position: fixed;
     inset: 0;
     z-index: 9999;
-    background: #000000;
+    background: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,9 +66,6 @@ body {
     transform: scale(2.5);
     animation: logoZoom 0.8s 1s var(--bezier) forwards;
     will-change: transform;
-    background: #FFFFFF;
-    padding: clamp(16px, 4vw, 40px);
-    border-radius: 12px;
 }
 
 @keyframes logoZoom {
@@ -130,9 +127,6 @@ body {
     width: auto;
     object-fit: contain;
     display: block;
-    background: #FFFFFF;
-    padding: 4px 10px;
-    border-radius: 6px;
 }
 
 /* HAMBURGER MENU */
