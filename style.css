@@ -1641,12 +1641,11 @@ footer {
     /* Mobile Nav Overlay */
     .gooey-nav-container {
         position: fixed;
-        top: 56px;
+        top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         background: #FFFFFF;
-        backdrop-filter: blur(10px);
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
